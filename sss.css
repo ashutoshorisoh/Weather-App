@@ -12,6 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap; /* Add this line */
 }
 
 .searchh {
@@ -26,6 +27,7 @@
     margin-right: 9px;
     font-size: 15px;
     text-align: center;
+    flex: 1 1 0px; /* Add this line */
 }
 
 .butn {
@@ -36,6 +38,7 @@
     width: 30px;
     height: 30px;
     cursor: pointer;
+    margin-top: 10px; /* Add this line */
 }
 
 .search button img {
@@ -103,4 +106,105 @@
     .card {
         width: 90%;
     }
-}
+
+    .searchh {
+        padding: 5vw 10vw;
+        border-radius: 2.5vw;
+        font-size: 3vw;
+    }
+
+    .butn {
+        width: 6vw;
+        height: 6vw;
+        border-radius: 2.5vw;
+    }
+
+    .weather-Icon {
+        max-width: 15vw;
+        margin-top: 5vw;
+    }
+
+    .weather h1 {
+        font-size: 4vw;
+    }
+
+    .weather h2 {
+        font-size: 5vw;
+    }
+
+    .details div {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    
+    .details img {
+        width: 4vw;
+        height: auto;
+        margin-right: 10px;
+    }
+    
+    .details p {
+        font-size: 2vw;
+        margin-bottom: 0;
+    }
+    
+    .error {
+        text-align: left;
+        margin-left: 10px;
+        margin-top: 10px;
+        font-style: italic;
+        font-size: small;
+        display: none;
+    }
+    
+    /* Add a media query for mobile view */
+    @media only screen and (max-width: 600px) {
+        .card {
+            width: 90%;
+        }
+    
+        .searchh {
+            padding: 5vw 10vw;
+            border-radius: 2.5vw;
+            font-size: 3vw;
+        }
+    
+        .butn {
+            width: 6vw;
+            height: 6vw;
+            border-radius: 2.5vw;
+        }
+    
+        .weather-Icon {
+            max-width: 15vw;
+            margin-top: 5vw;
+        }
+    
+        .weather h1 {
+            font-size: 4vw;
+        }
+    
+        .weather h2 {
+            font-size: 5vw;
+        }
+    
+        .details {
+            align-items: flex-start;
+        }
+    
+        .details div {
+            margin-bottom: 15px;
+        }
+    
+        .details img {
+            width: 8vw;
+        }
+    
+        .details p {
+            font-size: 3vw;
+        }
+    }
+    
