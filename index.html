@@ -10,19 +10,19 @@
     <div class="card">
         <div class="search">
             <input type="text" class="searchh" placeholder="enter your location" spellcheck="false">
-            <button class="butn"><img src="images/searchh.png"style="width: 15px; height: 18px;"></button>
+            <button class="butn"><img src="searchh.png" style="width: 15px; height: 18px;"></button>
         </div>
         <div class="error">
             <p>Invalid Location Name</p>
         </div>
         <div class="weather">
-            <img src="images/rain.png" class="weather-Icon">
+            <img src="rain.png" class="weather-Icon">
             <h1 class="temp">22°C</h1>
             <h2 class="city-name">West Bengal</h2>
         </div>
         <div class="details">
             <div class="col">
-                <img src="images/humidity.png" class="humiid">
+                <img src="humidity.png" class="humiid">
                 <div>
                     <p class="humidity">48%</p>
                     <p>Humidity</p>
@@ -30,13 +30,12 @@
             </div>
             
             <div class="coll">
-                <img src="images/wind.png" class="wiind">
+                <img src="wind.png" class="wiind">
                 <div>
                     <p class="wind">50km/hr</p>
                     <p>Wind</p>
                 </div>
             </div>
-            
         </div>
     </div>
     </div>
@@ -53,36 +52,35 @@
             document.querySelector(".weather").style.display="none";
             document.querySelector(".coll").style.display="none";
             document.querySelector(".col").style.display="none";
-        } else{var data = await response.json();
-        
+        } else{
+            var data = await response.json();
 
-        document.querySelector(".city-name").innerHTML = data.name;
-        document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C" ;
-        document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
-        document.querySelector(".wind").innerHTML = data.wind.speed + " km/hr";
+            document.querySelector(".city-name").innerHTML = data.name;
+            document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C" ;
+            document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
+            document.querySelector(".wind").innerHTML = data.wind.speed + " km/hr";
 
-        if (data.weather[0].main === "Clouds") {
-                weatherIcon.src = "images/cloud.png";
+            if (data.weather[0].main === "Clouds") {
+                weatherIcon.src = "cloud.png";
             } else if (data.weather[0].main === "Clear") {
-                weatherIcon.src = "images/clear.png";
+                weatherIcon.src = "clear.png";
             } else if (data.weather[0].main === "Rain") {
-                weatherIcon.src = "images/rainy.png";
+                weatherIcon.src = "rainy.png";
             } else if (data.weather[0].main === "Drizzle") {
-                weatherIcon.src = "images/drizzle.png";
+                weatherIcon.src = "drizzle.png";
             } else if (data.weather[0].main === "Mist") {
-                weatherIcon.src = "images/mist.png";
+                weatherIcon.src = "mist.png";
             } else if (data.weather[0].main === "Haze") {
-                weatherIcon.src = "images/haze.png";
+                weatherIcon.src = "haze.png";
             }
             document.querySelector(".error").style.display="none";
             document.querySelector(".weather").style.display="block";
             document.querySelector(".coll").style.display="block";
             document.querySelector(".col").style.display="block";
         }
-        
     }  
     searchBtn.addEventListener("click", ()=> {
-    checkWeather(searchBox.value);
+        checkWeather(searchBox.value);
     })
 </script>    
     
